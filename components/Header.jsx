@@ -3,6 +3,7 @@ import { Wrapper } from "./Wrapper";
 
 import Link from "next/link";
 import Menu from "./Menu";
+import MenuMobile from "./MenuMobile";
 
 import { BsCart } from "react-icons/bs";
 import {IoMdHeartEmpty} from 'react-icons/io'; 
@@ -25,7 +26,8 @@ const Header = () => {
                     </Link>
 
                     <Menu showCatMenu={showCatMenu} setShowCatMenu={setShowCatMenu}/> 
-                
+                    {mobileMenu && <MenuMobile showCatMenu={showCatMenu} setShowCatMenu={setShowCatMenu} setMobileMenu={setMobileMenu}/> } 
+                    
 
                     {/* icon start */}
                     <div className="flex items-center gap-2 text-black">
