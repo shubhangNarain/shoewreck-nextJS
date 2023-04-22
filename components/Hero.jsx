@@ -12,7 +12,7 @@ const Hero = () => {
       <Carousel
         autoPlay={true}
         infiniteLoop={true}
-        interval={1000}
+        interval={5000}
         showThumbs={false}
         showIndicators={false}
         showStatus={false}
@@ -24,7 +24,7 @@ const Hero = () => {
                 md:w-[50px] h-[30px] md:h-[50px] bg-black z-10 flex items-center
                 justify-center cursor-pointer hover:opacity-80"
                 >
-                <BiArrowBack className="text-[25px]" />
+                <BiArrowBack className="text-[25px] text-sm md:text-lg" />
                 </div>
             );
         }}
