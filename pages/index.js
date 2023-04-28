@@ -1,8 +1,21 @@
 import Hero from "@/components/Hero";
 import { Wrapper } from "@/components/Wrapper";
 import ProductCard from "@/components/ProductCard";
+import { useState, useEffect } from "react";
+import { fetchDataFromAPI } from "@/utils/api";
 
 export default function Home() {
+    const [data, setData] = useState(null);
+
+    useEffect(() => {
+        fetchProducts()
+    }, [])
+
+    const fetchProducts = async () => {
+        const {data} = await fetchDataFromAPI('/api/products')
+        setData(data)
+    }
+
     return <main>
         <Hero/>
         <Wrapper>
