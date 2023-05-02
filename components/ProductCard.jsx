@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link'
 import React from 'react'
+import { getDiscountPrice } from '@/utils/helper';
 
 
 const ProductCard = ({data: {attributes: p, id}}) => {
@@ -25,7 +26,7 @@ const ProductCard = ({data: {attributes: p, id}}) => {
                             &#8377;{p.original_price}
                         </p>
                         <p className='ml-auto text-base font-medium text-green-500'>
-                            20% off
+                            {getDiscountPrice(p.price, p.original_price)}% OFF
                         </p>
                     </>
                 )}

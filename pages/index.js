@@ -7,7 +7,7 @@ export default function Home({products}) {
 
     return <main>
         <Hero/>
-        <h1>{products?.data?.[0]?.attributes?.name}</h1>
+        {/* <h1>{products?.data?.[0]?.attributes?.name}</h1> */}
         <Wrapper>
             {/* heading para start */}
             <div className="text-center max-w-[800px] mx-auto my-[50px] md:my-[80px]">
